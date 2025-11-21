@@ -1,6 +1,6 @@
-import Navbar from "./components/Navbar";
 import "./globals.css";
-
+import Header from "./components/Header";
+import Navbar from "./components/Navbar";
 export default function RootLayout({
   children,
 }: {
@@ -8,10 +8,10 @@ export default function RootLayout({
 }) {
   return (
     <html lang="vi">
-      <body>
-       
-        {children}
-      </body>
+      <Header></Header>
+      <Navbar></Navbar>
+      
+      <body className="bg-[#141416] text-white">{children}</body>
     </html>
   );
 }
